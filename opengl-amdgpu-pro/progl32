@@ -1,0 +1,18 @@
+#!/bin/bash 
+
+progl32() {
+    export LD_LIBRARY_PATH="/opt/amdgpu-pro/lib/i386-linux-gnu:${LD_LIBRARY_PATH}"
+    export LIBGL_DRIVERS_PATH="/opt/amdgpu-pro/i386-linux-gnu/dri/"
+    #export dri_driver="amdgpu"	
+}
+
+
+if [[ $(basename $0) == progl32 ]]; then
+    progl32
+else
+    echo "Unknown function"
+    exit 1
+fi
+
+# applied variables, now execute the rest of the command
+"$@"
