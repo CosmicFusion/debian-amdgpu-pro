@@ -20,7 +20,7 @@ echo "Source: opengl-amdgpu-pro" >> ./DEBIAN/control
 echo "Version: 22.10.1-1401700" >> ./DEBIAN/control
 echo "Architecture: amd64" >> ./DEBIAN/control
 echo "Maintainer: CosmicFusion <hotrod.master@hotmail.com>" >> ./DEBIAN/control
-echo "Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.4), libstdc++6 (>= 4.8), amdgpu-pro-core" "libwayland-amdgpu-server0" >> ./DEBIAN/control
+echo "Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.4), libstdc++6 (>= 4.8), amdgpu-pro-core", "libwayland-amdgpu-server0" >> ./DEBIAN/control
 echo "Section: libs" >> ./DEBIAN/control
 echo "Priority: optional" >> ./DEBIAN/control
 echo "Multi-Arch: same" >> ./DEBIAN/control
