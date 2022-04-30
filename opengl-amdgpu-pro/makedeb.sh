@@ -33,9 +33,11 @@ cd ../
 cp -r ${output}/* ${pkgdir}
 cp -r ${pkgdir}/usr/lib ${pkgdir}/opt/amdgpu-pro/
 rm -r ${pkgdir}/usr/lib
+rm -r ${pkgdir}/opt/amdgpu/share/drirc.d/*
+mkdir ${pkgdir}/opt/amdgpu-pro/opengl/
+cp -r ${pkgdir}/opt/amdgpu-pro/lib ${pkgdir}/opt/amdgpu-pro/opengl/lib
 #
 mkdir ${pkgdir}/usr/bin
-
 cp ./progl ${pkgdir}/usr/bin
 
 dpkg-deb --build --root-owner-group ./opengl-amdgpu-pro

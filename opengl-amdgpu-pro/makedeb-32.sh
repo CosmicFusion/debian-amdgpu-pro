@@ -34,6 +34,9 @@ cp -r ${output}/* ${pkgdir}
 rm -r ${pkgdir}/opt/amdgpu-pro/lib/xorg
 cp -r ${pkgdir}/usr/lib ${pkgdir}/opt/amdgpu-pro/
 rm -r ${pkgdir}/usr/lib
+rm -r ${pkgdir}/opt/amdgpu/share/drirc.d/*
+mkdir ${pkgdir}/opt/amdgpu-pro/opengl/
+cp -r ${pkgdir}/opt/amdgpu-pro/lib ${pkgdir}/opt/amdgpu-pro/opengl/lib
 #
 
 mkdir ${pkgdir}/usr/bin

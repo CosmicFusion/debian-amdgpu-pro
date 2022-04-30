@@ -1,8 +1,8 @@
 #!/bin/bash 
 
 progl() {
-    export LD_LIBRARY_PATH="/opt/amdgpu-pro/lib/x86_64-linux-gnu:${LD_LIBRARY_PATH}"
-    export LIBGL_DRIVERS_PATH="/opt/amdgpu-pro/lib/x86_64-linux-gnu/dri/"
+    export LD_LIBRARY_PATH="/opt/amdgpu-pro/opengl/lib/x86_64-linux-gnu:${LD_LIBRARY_PATH}"
+    export LIBGL_DRIVERS_PATH="/opt/amdgpu-pro/opengl/lib/x86_64-linux-gnu/dri/"
     #export dri_driver="amdgpu"	
 }
 
