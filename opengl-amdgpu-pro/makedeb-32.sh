@@ -32,7 +32,6 @@ cd ../
 #
 cp -r ${output}/* ${pkgdir}
 rm -r ${pkgdir}/opt/amdgpu-pro/lib/xorg
-cp -r ${output}/* ${pkgdir}
 cp -r ${pkgdir}/usr/lib ${pkgdir}/opt/amdgpu-pro/
 rm -r ${pkgdir}/usr/lib
 #
