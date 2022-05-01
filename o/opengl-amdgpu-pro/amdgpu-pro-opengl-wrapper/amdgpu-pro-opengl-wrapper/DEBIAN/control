@@ -1,0 +1,10 @@
+Package: amdgpu-pro-opengl-wrapper
+Source: amdgpu-pro-installer
+Version: 22.10.1-1401700
+Architecture: all
+Maintainer: CosmicFusion <hotrod.master@hotmail.com>
+Depends: opengl-amdgpu-pro
+Section: libs
+Priority: optional
+Multi-Arch: foreign
+Description: A Wrapper that forces an application to use amdgpu-pro OpenGL
