@@ -16,6 +16,8 @@ wget http://repo.radeon.com/amdgpu/$amdpro/ubuntu/pool/proprietary/o/opengl-amdg
 
 wget http://repo.radeon.com/amdgpu/$amdpro/ubuntu/pool/proprietary/o/opengl-amdgpu-pro/libgl1-amdgpu-pro-ext_"$major"-"$minor"~"$ubuntu"_amd64.deb
 
+wget http://repo.radeon.com/amdgpu/$amdpro/ubuntu/pool/proprietary/o/opengl-amdgpu-pro/libgl1-amdgpu-pro-glx_"$major"-"$minor"~"$ubuntu"_amd64.deb
+
 wget http://repo.radeon.com/amdgpu/$amdpro/ubuntu/pool/proprietary/o/opengl-amdgpu-pro/libglapi1-amdgpu-pro_"$major"-"$minor"~"$ubuntu"_amd64.deb
 
 wget http://repo.radeon.com/amdgpu/$amdpro/ubuntu/pool/proprietary/o/opengl-amdgpu-pro/libgles2-amdgpu-pro_"$major"-"$minor"~"$ubuntu"_amd64.deb
@@ -51,6 +53,16 @@ rm debian-binary
 ####
 
 ar -x ../debs/libgl1-amdgpu-pro-ext_"$major"-"$minor"~"$ubuntu"_amd64.deb
+
+tar -xf data.tar.xz
+
+rm -r *.tar*
+
+rm debian-binary
+
+####
+
+ar -x ../debs/libgl1-amdgpu-pro-glx_"$major"-"$minor"~"$ubuntu"_amd64.deb
 
 tar -xf data.tar.xz
 
@@ -123,7 +135,7 @@ mkdir -p ./DEBIAN
 
 touch ./DEBIAN/control
 
-printf "Package: opengl-amdgpu-pro\nVersion: $major-$minor~$ubuntu\nArchitecture: amd64\nMaintainer: $LOGNAME\nDepends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 11), libwayland-amdgpu-client0, amdgpu-pro-core\nProvides: libegl1-amdgpu-pro, libgl1-amdgpu-pro-dri, libgl1-amdgpu-pro-ext, libglapi1-amdgpu-pro, libgles2-amdgpu-pro\nSection: libs\nPriority: optional\nMulti-Arch: same\nDescription: AMDGPU Pro OpenGL driver\n " >> ./DEBIAN/control
+printf "Package: opengl-amdgpu-pro\nVersion: $major-$minor~$ubuntu\nArchitecture: amd64\nMaintainer: $LOGNAME\nDepends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 11), libwayland-amdgpu-client0, amdgpu-pro-core\nProvides: libegl1-amdgpu-pro, libgl1-amdgpu-pro-dri, libgl1-amdgpu-pro-ext, libgl1-amdgpu-pro-glx, libglapi1-amdgpu-pro, libgles2-amdgpu-pro\nSection: libs\nPriority: optional\nMulti-Arch: same\nDescription: AMDGPU Pro OpenGL driver\n " >> ./DEBIAN/control
 
 #
 
