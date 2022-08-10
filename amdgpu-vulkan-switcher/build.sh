@@ -20,3 +20,8 @@ cd ../
 
 dpkg-deb --build ./DEBIAN
 
+#
+
+echo "cleaning"
+
+rm -r ./DEBIAN/DEBIAN
