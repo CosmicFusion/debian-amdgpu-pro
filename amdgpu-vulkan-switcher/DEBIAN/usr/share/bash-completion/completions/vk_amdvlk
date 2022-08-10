@@ -1,0 +1,3 @@
+_have vk_radv && complete -F _command vk_radv
+_have vk_amdvlk && complete -F _command vk_amdvlk
+_have vk_pro && complete -F _command vk_pro
