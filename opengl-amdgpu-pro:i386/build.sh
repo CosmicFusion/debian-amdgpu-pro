@@ -62,7 +62,7 @@ rm debian-binary
 
 ####
 
-ar -x ../debs/libgl1-amdgpu-pro-ext_"$major"-"$minor"~"$ubuntu"_i386.deb
+ar -x ../debs/libgl1-amdgpu-pro-glx_"$major"-"$minor"~"$ubuntu"_i386.deb
 
 tar -xf data.tar.xz
 
