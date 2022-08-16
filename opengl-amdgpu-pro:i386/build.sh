@@ -143,7 +143,7 @@ cd ../
 
 #
 
-dpkg-deb --build ./DEBIAN
+dpkg-deb --build --root-owner-group  ./DEBIAN
 
 echo "cleaning"
 
