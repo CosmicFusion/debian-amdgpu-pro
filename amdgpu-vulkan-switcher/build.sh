@@ -6,6 +6,14 @@ echo "making debian package"
 
 cd ./DEBIAN
 
+#
+
+echo "fixing permissions"
+
+chmod -R +rwx ./usr/bin/*
+
+#
+
 mkdir -p ./DEBIAN
 
 touch ./DEBIAN/control
@@ -18,7 +26,7 @@ cd ../
 
 #
 
-dpkg-deb --build ./DEBIAN
+dpkg-deb --build dpkg-deb --build --root-owner-group ./DEBIAN
 
 #
 
