@@ -26,7 +26,7 @@ cd ../
 
 #
 
-dpkg-deb --build dpkg-deb --build --root-owner-group ./DEBIAN
+dpkg-deb --build --root-owner-group ./DEBIAN
 
 #
 
